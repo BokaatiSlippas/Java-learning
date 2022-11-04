@@ -39,38 +39,39 @@ public class Calculator {
     public static String operations() {
         Scanner object = new Scanner(System.in);
         String operation;
-        System.out.println("What is the operation you would like to carry out from ['addition','subtraction','multiplication','division','square','cube','factorial']: ");
+        System.out.println("What is the operation you would like to carry out from\nAddition\nSubtraction\nMultiplication\nDivision\nSquare\nCube\nPower\nFactorial");
         operation = object.nextLine();
-        while ((!operation.equals("addition")) && (!operation.equals("subtraction")) && (!operation.equals("multiplication")) && (!operation.equals("division")) && (!operation.equals("square")) && (!operation.equals("cube")) && (!operation.equals("power")) && (!operation.equals("factorial"))) {
-            System.out.println("Make sure you enter an operation within our list ['addition','subtraction','multiplication','division','square','cube','power','factorial']: ");
+        while ((!operation.equals("Addition")) && (!operation.equals("Subtraction")) && (!operation.equals("Multiplication")) && (!operation.equals("Division")) && (!operation.equals("Square")) && (!operation.equals("Cube")) && (!operation.equals("Power")) && (!operation.equals("Factorial"))) {
+            System.out.println("Make sure you enter an operation within our list\nAddition\nSubtraction\nMultiplication\nDivision\nSquare\nCube\nPower\nFactorial");
             operation = object.nextLine();
         }
         return operation;
     }
     public static void main(String[]  args) {
         String operation = operations();
-        if (operation.equals("factorial")) {
+        if (operation.equals("Factorial")) {
             Scanner user_input = new Scanner(System.in);
             System.out.println("Enter your value");
             int first_value = user_input.nextInt();
             int factorialanswer = factorial(first_value);
             System.out.println(factorialanswer);
-        } else if (operation.equals("square")) {
+        } else if (operation.equals("Square")) {
             Scanner user_input = new Scanner(System.in);
             System.out.println("Enter your value");
             double first_value = user_input.nextDouble();
             double squareanswer = squared(first_value);
             System.out.println(squareanswer);
-        } else if (operation.equals("cube")) {
+        } else if (operation.equals("Cube")) {
             Scanner user_input = new Scanner(System.in);
             System.out.println("Enter your value");
             double first_value = user_input.nextDouble();
             double cubeanswer = cubed(first_value);
             System.out.println(cubeanswer);
-        } else if (operation.equals("power")) {
+        } else if (operation.equals("Power")) {
             Scanner user_input = new Scanner(System.in);
-            System.out.println("Enter your values");
+            System.out.println("Enter your first value");
             double first_value = user_input.nextDouble();
+            System.out.println("Enter your second value");
             double second_value = user_input.nextDouble();
             double poweranswer = power(first_value,second_value);
             System.out.println(poweranswer);
@@ -82,16 +83,16 @@ public class Calculator {
             double first_value = user_input.nextDouble();
             System.out.println("Enter your second value");
             double second_value = user_input.nextDouble();
-            if (operation.equals("addition")) {
+            if (operation.equals("Addition")) {
                 double additionanswer = addition(first_value, second_value);
                 System.out.println(String.format("%.2f", additionanswer));
-            } else if (operation.equals("subtraction")) {
+            } else if (operation.equals("Subtraction")) {
                 double subtractionanswer = subtraction(first_value, second_value);
                 System.out.println(String.format("%.2f", subtractionanswer));
-            } else if (operation.equals("multiplication")) {
+            } else if (operation.equals("Multiplication")) {
                 double multiplicationanswer = multiplication(first_value, second_value);
                 System.out.println(String.format("%.2f", multiplicationanswer));
-            } else if (operation.equals("division")) {
+            } else if (operation.equals("Division")) {
                 double divisionanswer = division(first_value, second_value);
                 System.out.println(String.format("%.2f", divisionanswer));
             }
